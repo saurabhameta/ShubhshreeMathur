@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Anu ki Amma</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background-color: white;
+      color: #333;
+    }
+    .book-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    .book-hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      animation: fadeIn 1.2s ease;
+    }
+    .book-hero img {
+      max-width: 300px;
+      width: 80%;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+    .book-title {
+      font-size: 2.2rem;
+      margin-top: 1.5rem;
+    }
+    .book-age {
+      font-size: 1rem;
+      color: #888;
+      margin-top: 0.2rem;
+    }
+    .book-description {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    .book-gallery {
+      margin-top: 3rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .book-gallery img {
+      width: 100%;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+    .book-gallery img:hover {
+      transform: scale(1.03);
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    .brand-link {
+      color: #c2410c; /* text-orange-700 */
+    }
+    nav a:hover {
+      color: #db2777; /* text-pink-600 */
+    }
+  </style>
+</head>
+<body>
+
+  <div id="navbar-container"></div>
+
+  <main class="w-full px-6 sm:px-10 lg:px-20 py-10 mt-10">
+
+    <!-- Hero Section -->
+    <section class="flex flex-col md:flex-row gap-6 md:items-start">
+      <!-- Text Column (1/6) -->
+      <div class="md:w-1/6">
+        <h1 class="text-2xl font-bold mb-4">Anu ki Amma</h1>
+        <p class="text-base leading-relaxed">
+          A little girl who wants to be like her mother. As kids, we all have that innocent longing to copy our parents.
+          But we do not realise what we are aspiring for...it's a childish whim. The underlying theme, though, 
+          is of how a girl is tamed to fit a certain "image" since childhood and how people decide the standards of 
+          "good" and "bad" character. I have used the visual metaphor of a long thick braid, which is symbolic of a good,
+           sincere, docile, domestic girl in our culture but can also symbolise the shackles or tangles in our society. The 
+           little girl is fascinated by her mother's long hair. All she wants is long hair but, there are certain guidelines she must follow if she wants them.
+        </p>
+        
+        <!-- Support Link -->
+        <div class="mt-6 pt-4 border-t border-gray-200">
+          <a href="https://amzn.to/similar-books-affiliate-link" target="_blank" rel="nofollow" 
+             class="inline-flex items-center text-purple-700 hover:text-purple-800 bg-purple-50 hover:bg-purple-100 px-4 py-2 rounded-md transition-all duration-200 text-sm font-medium border border-purple-200">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+            </svg>
+            Find similar stories
+          </a>
+          <p class="text-xs text-gray-400 mt-2">*Find books with similar themes and support independent creators</p>
+        </div>
+        <p>
+          Under Production
+        </p>
+      </div>
+    
+      <!-- Image Column (5/6) -->
+      <div class="md:w-5/6 space-y-6">
+        <img src="./assets/narratives/Anu ki Amma/untitled_Page_5.webp" alt="Hero Image" class="rounded-lg shadow-xl w-full" />
+        <img src="./assets/narratives/Anu ki Amma/untitled_Page_2.webp" alt="Gallery Image 1" class="rounded-lg shadow-xl w-full" />
+        <img src="./assets/narratives/Anu ki Amma/untitled_Page_3.webp" alt="Gallery Image 2" class="rounded-lg shadow-xl w-full" />
+        <img src="./assets/narratives/Anu ki Amma/untitled_Page_4.webp" alt="Gallery Image 3" class="rounded-lg shadow-xl w-full" />
+      </div>
+    </section>
+  
+  </main>
+
+  <div id="footer"></div>
+</body>
+</html>

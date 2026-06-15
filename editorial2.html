@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Editorial Title | Shubhshree Mathur</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+    }
+    .brand-link {
+      color: #c2410c; /* text-orange-700 */
+    }
+    nav a:hover {
+      color: #db2777; /* text-pink-600 */
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Navbar (reusable) -->
+  <div id="navbar-container"></div>
+
+  <!-- Editorial Hero Section -->
+  <section class="max-w-5xl mx-auto py-12 px-6">
+    <h1 class="text-4xl font-bold mb-4">Champak</h1>
+    <img src="assets/editorials/Chakmak/1.webp" alt="Editorial Cover" class="rounded-lg shadow-lg w-full mb-8" />
+
+    <!-- Editorial Details -->
+    <div class="space-y-4 text-lg leading-relaxed">
+      <p><strong>Description:</strong> 
+        While Chakmak is also read with great interest by adults, it is a magazine primarily crafted for readers around the age group of 
+        11 to 14 years. Chakmak considers children to be intelligent individuals. That's why it presents content on a wide range of subjects 
+        from around the world. Chakmak questions the notion of restricting children to only fairy tales and stories of kings and queens written 
+        in syrupy, clichéd language. Just as Chakmak warmly embraces imaginative literature, it also introduces its readers to the realities of the world.
+         I contributed as an illustrator for a lot of small poems and language trivia content for the same.
+      </p>
+    </div>
+  </section>
+
+  <!-- Editorial Image Gallery -->
+  <section class="max-w-5xl mx-auto px-6 pb-12">
+    <h2 class="text-2xl font-semibold mb-6">Artwork from this Editorial</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <img src="assets/editorials/Chakmak/2.webp" data-index="0" class="gallery-img cursor-pointer rounded-lg shadow-md" />
+      <img src="assets/editorials/Chakmak/ek hi thali main.webp" data-index="1" class="gallery-img cursor-pointer rounded-lg shadow-md" />
+      <img src="assets/editorials/Chakmak/spot 1.webp" data-index="2" class="gallery-img cursor-pointer rounded-lg shadow-md" />
+      <img src="assets/editorials/Chakmak/spot2.webp" data-index="3" class="gallery-img cursor-pointer rounded-lg shadow-md" />
+      <img src="assets/editorials/Chakmak/zoya1.webp" data-index="4" class="gallery-img cursor-pointer rounded-lg shadow-md" />
+      <img src="assets/editorials/Chakmak/zoya2.webp" data-index="5" class="gallery-img cursor-pointer rounded-lg shadow-md" />
+    </div>    
+  </section>
+
+<!-- Modal Overlay -->
+<div id="imageModal" class="fixed inset-0 bg-black bg-opacity-90 z-50 hidden">
+  <!-- Close Button -->
+  <button id="closeModal" class="absolute top-4 right-4 text-white text-3xl z-50">&times;</button>
+
+  <!-- Nav Buttons -->
+  <button id="prevBtn" class="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-4xl z-50">&#10094;</button>
+  <button id="nextBtn" class="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-4xl z-50">&#10095;</button>
+
+  <!-- Image Container -->
+  <div class="w-full h-full flex items-center justify-center p-4 overflow-auto">
+    <img
+      id="modalImage"
+      src=""
+      alt="Artwork"
+      class="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
+    />
+  </div>
+</div>
+
+<!-- Lightbox2 JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+<script>
+  const modal = document.getElementById('imageModal');
+  const modalImage = document.getElementById('modalImage');
+  const closeModal = document.getElementById('closeModal');
+  const nextBtn = document.getElementById('nextBtn');
+  const prevBtn = document.getElementById('prevBtn');
+
+  const images = Array.from(document.querySelectorAll('.gallery-img'));
+  let currentIndex = 0;
+
+  function showModal(index) {
+    currentIndex = index;
+    modalImage.src = images[currentIndex].src;
+    modal.classList.remove('hidden');
+  }
+
+  function changeImage(step) {
+    currentIndex = (currentIndex + step + images.length) % images.length;
+    modalImage.src = images[currentIndex].src;
+  }
+
+  images.forEach((img, index) => {
+    img.addEventListener('click', () => showModal(index));
+  });
+
+  closeModal.addEventListener('click', () => {
+    modal.classList.add('hidden');
+  });
+
+  nextBtn.addEventListener('click', () => changeImage(1));
+  prevBtn.addEventListener('click', () => changeImage(-1));
+
+  // Optional: keyboard arrow navigation
+  document.addEventListener('keydown', (e) => {
+    if (modal.classList.contains('hidden')) return;
+    if (e.key === 'ArrowRight') changeImage(1);
+    if (e.key === 'ArrowLeft') changeImage(-1);
+    if (e.key === 'Escape') modal.classList.add('hidden');
+  });
+</script>
+</body>
+
+<footer>
+  <div id="footer"></div>
+  
+  <!-- Script to Load Navbar and Footer -->
+  <script src="script.js"></script>
+</footer>
+
+</html>

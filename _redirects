@@ -1,0 +1,6 @@
+# Handle clean URLs for Netlify
+/books    /books.html    200
+/editorials    /editorials.html    200
+/narratives    /narratives.html    200
+/about    /about.html    200
+/contact    /contact.html    200 

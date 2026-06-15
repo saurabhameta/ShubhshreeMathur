@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Shubhshree Mathur</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
+  <style>
+    body { font-family: 'Quicksand', sans-serif; }
+    .animate-fadeInUp {
+      opacity: 1 !important;
+      transform: translateY(0px) !important;
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .brand-link {
+      color: #c2410c; /* text-orange-700 */
+    }
+    nav a:hover {
+      color: #db2777; /* text-pink-600 */
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+   <!-- Navbar -->
+   <div id="navbar-container"></div>
+
+  <!-- Contact Section -->
+  <section class="py-20 px-6 max-w-3xl mx-auto animate-on-scroll">
+    <h1 class="text-4xl font-bold text-center mb-10">Let's Collaborate!</h1>
+    <p class="text-lg text-center mb-10">
+      If you're a publisher, author, or creative looking to bring a story to life, I'd love to hear from you.
+      Feel free to send a message below or reach out via email.
+    </p>
+
+    <form name="contact" method="POST" data-netlify="true" class="space-y-6 bg-white p-8 rounded-xl shadow animate-on-scroll">
+      <input type="hidden" name="form-name" value="contact" />
+      <div>
+        <label for="name" class="block mb-2 font-semibold">Your Name</label>
+        <input type="text" id="name" name="name" class="w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-pink-500 focus:border-transparent" required>
+      </div>
+      <div>
+        <label for="email" class="block mb-2 font-semibold">Email</label>
+        <input type="email" id="email" name="email" class="w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-pink-500 focus:border-transparent" required>
+      </div>
+      <div>
+        <label for="project" class="block mb-2 font-semibold">Project Type</label>
+        <select name="project" id="project" class="w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-pink-500 focus:border-transparent">
+          <option value="">Select project type</option>
+          <option value="children-book">Children's Book Illustration</option>
+          <option value="magazine">Magazine Illustration</option>
+          <option value="editorial">Editorial Illustration</option>
+          <option value="custom">Custom Project</option>
+          <option value="collaboration">General Collaboration</option>
+        </select>
+      </div>
+      <div>
+        <label for="message" class="block mb-2 font-semibold">Message</label>
+        <textarea id="message" name="message" rows="5" class="w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-pink-500 focus:border-transparent" placeholder="Tell me about your project..." required></textarea>
+      </div>
+      <button type="submit" class="bg-pink-600 text-white px-8 py-3 rounded-lg hover:bg-pink-700 transition-all duration-300 font-semibold">
+        Send Message
+      </button>
+    </form>
+
+    <p class="text-center mt-8 text-lg animate-on-scroll">
+      Or email me directly at <a href="mailto:hello@shubhshreemathur.com" class="text-blue-400 font-semibold">hello@shubhshreemathur.com</a>
+    </p>
+  </section>
+
+
+</body>
+
+<footer>
+  <div id="footer"></div>
+  <!-- Script to Load Navbar and Footer -->
+</footer>
+
+</html>

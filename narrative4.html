@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>If I have a daughter</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background-color: white;
+      color: #333;
+    }
+    .book-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    .book-hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      animation: fadeIn 1.2s ease;
+    }
+    .book-hero img {
+      max-width: 300px;
+      width: 80%;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+    .book-title {
+      font-size: 2.2rem;
+      margin-top: 1.5rem;
+    }
+    .book-age {
+      font-size: 1rem;
+      color: #888;
+      margin-top: 0.2rem;
+    }
+    .book-description {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    .book-gallery {
+      margin-top: 3rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .book-gallery img {
+      width: 100%;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+    .book-gallery img:hover {
+      transform: scale(1.03);
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    .brand-link {
+      color: #c2410c; /* text-orange-700 */
+    }
+    nav a:hover {
+      color: #db2777; /* text-pink-600 */
+    }
+  </style>
+</head>
+<body>
+
+  <div id="navbar-container"></div>
+
+  <main class="w-full px-6 sm:px-10 lg:px-20 py-10 mt-10">
+
+    <!-- Hero Section -->
+    <section class="flex flex-col md:flex-row gap-6 md:items-start">
+      <!-- Text Column (1/6) -->
+      <div class="md:w-1/6">
+        <h1 class="text-2xl font-bold mb-4">If I have a Daughter</h1>
+        <p class="text-base leading-relaxed">
+          A thought written and illustrated by myself about what I would do If I ever have a daughter. This is very close to me as I have grown up surrounded by women that are my sister, mother and grandmother in the house. Having seen how women are brought up versus how they should be brought up inspired me to put these thoughts down.
+        </p>
+        <p>
+          (Under-production)
+        </p>
+      </div>
+    
+      <!-- Image Column (5/6) -->
+      <div class="md:w-5/6 space-y-6">
+        <img src="./assets/narratives/If I have a daughter/if i have a daughter.webp" alt="Hero Image" class="rounded-lg shadow-xl w-full" />
+        <img src="./assets/narratives/If I have a daughter/if i have a daughter2.webp" alt="Gallery Image 1" class="rounded-lg shadow-xl w-full" />
+        <img src="./assets/narratives/If I have a daughter/if i have a daughter3.webp" alt="Gallery Image 2" class="rounded-lg shadow-xl w-full" />
+        <img src="./assets/narratives/If I have a daughter/if i have a daughter4.webp" alt="Gallery Image 3" class="rounded-lg shadow-xl w-full" />
+        <img src="./assets/narratives/If I have a daughter/if i have a daughter5.webp" alt="Gallery Image 4" class="rounded-lg shadow-xl w-full" />
+        <img src="./assets/narratives/If I have a daughter/if i have a daughter6.webp.webp" alt="Gallery Image 5" class="rounded-lg shadow-xl w-full" />
+      </div>
+    </section>
+  
+  </main>
+</body>
+
+<footer>
+  <div id="footer"></div>
+  
+  <!-- Script to Load Navbar and Footer -->
+</footer>
+
+</html>
